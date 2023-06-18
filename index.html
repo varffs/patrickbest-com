@@ -1,22 +1,94 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
-
 <html>
   <head>
-    <title>patrickbest.com</title>
+    <title>pb.com</title>
 
-    <link rel="stylesheet" type="text/css" href="dist/css/site.css" />
-<!--     <link rel="stylesheet" type="text/css" href="dist/css/site.min.css" /> -->
+    <meta property="og:title" content="Patrick Best" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+
+    <style type="text/css">
+      html {
+        font-size: 40px;
+        max-width: 900px;
+      }
+      html.dark-mode {
+        background-color: #000;
+        color: #fff;
+      }
+      .ate-image {
+        display: none;
+      }
+      li {
+        list-style-type: none;
+      }
+      li:before {
+        content: "\2042";
+        color: inherit;
+        display: inline-block;
+        width: 1.1em;
+        margin-left: -1em;
+      }
+    </style>
+    <script type="text/javascript">
+      let ate = 0;
+
+      function didAte() {
+        ate++;
+        
+        if (ate === 1) {
+          document.querySelector(".ate-image").style.display = "inline-block";
+        } else if (ate === 2) {
+          alert("A home grown chile poblano battered in a light salsa with beans");          
+        } else {
+          document.querySelector("html").classList.add("dark-mode");
+        }
+      }
+    </script>                                                        
+<!-- 
+  This is a clue (a very obvious one):
+
+               ,---,       ,-.----.       ,---,.    ,---,.  .--.--.    
+       ,---.  '  .' \      \    /  \    ,'  .' |  ,'  .' | /  /    '.  
+      /__./| /  ;    '.    ;   :    \ ,---.'   |,---.'   ||  :  /`. /  
+ ,---.;  ; |:  :       \   |   | .\ : |   |   .'|   |   .';  |  |--`   
+/___/ \  | |:  |   /\   \  .   : |: | :   :  :  :   :  :  |  :  ;_     
+\   ;  \ ' ||  :  ' ;.   : |   |  \ : :   |  |-,:   |  |-, \  \    `.  
+ \   \  \: ||  |  ;/  \   \|   : .  / |   :  ;/||   :  ;/|  `----.   \ 
+  ;   \  ' .'  :  | \  \ ,';   | |  \ |   |   .'|   |   .'  __ \  \  | 
+   \   \   '|  |  '  '--'  |   | ;\  \'   :  '  '   :  '   /  /`--'  / 
+    \   `  ;|  :  :        :   ' | \.'|   |  |  |   |  |  '--'.     /  
+     :   \ ||  | ,'        :   : :-'  |   :  \  |   :  \    `--'---'   
+      '---" `--''          |   |.'    |   | ,'  |   | ,'               
+                           `---'      `----'    `----'                                       
+ -->
   </head>
-
   <body>
-    <div class="container">
-      <h1>Patrick Best</h1>
-      <ul>
-        <li><a href="http://interglobal.vision">interglobal.vision</a></li>
-        <li><a href="http://erfmuzik.net">erfmuzik.net</a></li>
-        <li><a href="http://blog.patrickbest.com">blog.patrickbest.com</a></li>
-        <li><a href="http://tumblr.patrickbest.com">tumblr.patrickbest.com</a></li>
-      </ul>
-    </div>
+    <!-- Todo:
+     - [ ] Add open graph tags
+      - [ ] Link up the other things: Mapimi? Organic BMX?! Studio PB
+       - [x] Add another easter egg? NO
+        - [x] Maybe a list of things I like
+         - [x] more happens on more clicks
+    -->
+      
+    <p>
+      I'm Patrick Best, a multi-hypen-<a href="#damn-he-ate" onclick="didAte()">ate</a><img src="ate.jpeg" alt="A home grown chile poblano battered in a light salsa with beans" class="ate-image"> builder. I'm a <a href="https://novaramedia.com" rel="noopener" target="_blank">Sigma</a>, <a href="https://manorfarmdorset.co.uk" rel="noopener" target="_blank">Tau</a>, <a href="https://erfmuzik.net" rel="noopener" target="_blank">Upsilon</a>. (and some other things)
+    </p>
+    <hr />
+    <p>
+      I'm looking to build worlds, products, buildings, organisations, systems, teams, and futures. I'm open to any and all good ideas and projects. I'm not too hard to find and contact so please do.
+    </p>
+    <hr />
+    <span>Some possible prompts:</span>
+    <ul>
+      <li>Concrete</li>
+      <li>The dembow riddim</li>
+      <li>Physical computing</li>
+      <li>Automation that serves the human</li>
+      <li>Organic agri/hori-culture</li>
+      <li>Upside-out design thinking</li>      
+      <li>The beach</li>
+      <li>Anti-quantitative aesthetics</li>
+    </ul>
   </body>
 </html>
